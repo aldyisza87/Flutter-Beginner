@@ -13,16 +13,18 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 1,
+        elevation: 0,
         backgroundColor: Colors.white,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 8, top: 2),
+            padding:
+                const EdgeInsets.only(bottom: 8, top: 2, left: 8, right: 8),
             child: Row(
               children: [
                 SizedBox(
-                  width: 250,
+                  width: 228,
                   child: TextField(
                     autofocus: false,
                     style: const TextStyle(fontSize: 14),
