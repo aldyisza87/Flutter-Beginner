@@ -124,7 +124,7 @@ class ProductDetail extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
             ),
             const SizedBox(
-              height: 50,
+              height: 150,
             ),
             SizedBox(
                 height: 50,
@@ -149,44 +149,54 @@ class ProductDetail extends StatelessWidget {
                         label: const Text(''),
                       ),
                     ),
-                    SizedBox(
-                      width: 150,
-                      height: 60,
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          shape: MaterialStateProperty.all(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 150,
+                        height: 60,
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
                             ),
                           ),
-                        ),
-                        child: const Text(
-                          'Beli Langsung',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14),
+                          child: const Text(
+                            'Beli Langsung',
+                            style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: 150,
-                      height: 60,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(Colors.green[700]),
-                            shape: MaterialStatePropertyAll(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            )),
-                        child: const Text(
-                          '+ Keranjang',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 150,
+                        height: 60,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.green[700]),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              )),
+                          child: const Text(
+                            '+ Keranjang',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
                         ),
                       ),
                     )
