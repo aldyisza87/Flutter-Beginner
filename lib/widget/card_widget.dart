@@ -15,11 +15,16 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ProductDetail(
-            product: product,
-          );
-        }));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ProductDetail(
+                product: product,
+              );
+            },
+          ),
+        );
       },
       child: Card(
         elevation: 2,

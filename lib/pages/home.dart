@@ -20,7 +20,7 @@ class _MainPageState extends State<MainPage> {
         actions: [
           Padding(
             padding:
-                const EdgeInsets.only(bottom: 8, top: 2, left: 8, right: 8),
+                const EdgeInsets.only(bottom: 8, top: 8, left: 8, right: 8),
             child: Row(
               children: [
                 SizedBox(
@@ -90,16 +90,19 @@ class _MainPageState extends State<MainPage> {
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 0.7,
-            crossAxisCount: 2,
-          ),
-          itemBuilder: (context, index) {
-            return CardWidget(product: productDji[index]);
-          },
-          itemCount: productDji.length,
-        ),
+        child: LayoutBuilder(builder: (context, constranints) {
+          final crossAxisCount = constranints.maxWidth > 600 ? 3 : 2;
+          return GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: 0.7,
+              crossAxisCount: crossAxisCount,
+            ),
+            itemBuilder: (context, index) {
+              return CardWidget(product: productDji[index]);
+            },
+            itemCount: productDji.length,
+          );
+        }),
       ),
     );
   }
